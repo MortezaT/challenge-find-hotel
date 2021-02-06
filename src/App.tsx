@@ -1,7 +1,10 @@
+import { Formik } from 'formik'
 import React, { useState } from 'react'
 import { Button } from './components/Button'
 import { Search } from './components/icons'
 import { Modal } from './components/Modal'
+import { SelectField } from './components/SelectField'
+import { StepperField } from './components/Stepper'
 import { FhThemeProvider } from './theme'
 
 function App () {
@@ -21,9 +24,11 @@ function App () {
                 Modal <b>Done</b>
               </li>
               <li>
-                SelectField <b>In Progress</b>
+                SelectField <b>Done</b>
               </li>
-              <li>StepperField</li>
+              <li>
+                StepperField <b>Done</b>
+              </li>
             </ul>
           </div>
           <Button
@@ -34,6 +39,15 @@ function App () {
           >
             Open Modal
           </Button>
+          <Formik
+            initialValues={{ room: { adults: 3, children: [5] } }}
+            onSubmit={console.log}
+          >
+            <>
+              <SelectField name='room.adults' range={[1, 10]} />
+              <StepperField name='room.adults' min={1} max={5} />
+            </>
+          </Formik>
         </div>
         {isOpen && (
           <Modal
