@@ -18,6 +18,12 @@ export const theme = {
     grey: '#EFF2F6'
   },
   typography: {
+    title: {
+      fontSize: 18,
+      fontFamily: 'Inter',
+      fontWeight: '600',
+      fontStyle: 'normal'
+    },
     body: {
       fontSize: 16,
       fontFamily: 'Inter',
@@ -25,7 +31,8 @@ export const theme = {
     }
   },
   shadows: [
-    '0px 0px 1px rgba(68, 80, 95, 0.08), 0px 1px 4px rgba(68, 80, 95, 0.32)'
+    '0px 0px 1px rgba(68, 80, 95, 0.08), 0px 1px 4px rgba(68, 80, 95, 0.32)',
+    '0px 0px 1px rgba(68, 80, 95, 0.08), 0px 1px 4px rgba(68, 80, 95, 0.2)'
   ],
   zIndex: {
     modal: 100
