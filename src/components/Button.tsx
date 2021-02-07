@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, FC, useMemo } from 'react'
 import { createFhUseStyles } from 'src/theme/createFhUseStyles'
-import { PalletteColors } from '../theme'
+import { paletteColors } from '../theme'
 
 type ButtonColors = 'primary' | 'secondary' | 'error' | 'default'
 type ButtonSizes = 'medium' | 'large'
@@ -19,7 +19,7 @@ const buttonSizes: Record<ButtonSizes, number> = {
   large: 48
 }
 
-const containedVariantColorMap: Record<ButtonColors, PalletteColors> = {
+const containedVariantColorMap: Record<ButtonColors, paletteColors> = {
   default: 'background',
   error: 'background',
   primary: 'background',
@@ -51,7 +51,7 @@ export const Button: FC<ButtonProps> = props => {
 }
 
 const useStyle = createFhUseStyles(
-  ({ pallette, typography, shadows, spacing, borderRadius }) => ({
+  ({ palette, typography, shadows, spacing, borderRadius }) => ({
     root: {
       ...typography.body,
       display: 'flex',
@@ -72,22 +72,22 @@ const useStyle = createFhUseStyles(
       padding: spacing(3),
       boxShadow: shadows[0],
       border: ({ color }: ButtonProps) => {
-        const borderColor = color !== 'secondary' ? pallette[color] : '#BFDAF9'
+        const borderColor = color !== 'secondary' ? palette[color] : '#BFDAF9'
         return `1px solid ${borderColor}`
       },
       color: ({ color }: ButtonProps) => {
         const mapped = containedVariantColorMap[color]
-        return pallette[mapped]
+        return palette[mapped]
       },
       backgroundColor: ({ color }: ButtonProps) =>
-        pallette[color] ?? pallette.primary
+        palette[color] ?? palette.primary
     },
     text: {
       padding: 0,
       border: 'none',
       boxShadow: 'none',
       backgroundColor: 'transparent',
-      color: ({ color }: ButtonProps) => pallette[color] ?? pallette.primary
+      color: ({ color }: ButtonProps) => palette[color] ?? palette.primary
     },
     disabled: {
       color: '#8e8e8e',

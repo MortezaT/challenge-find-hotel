@@ -47,13 +47,13 @@ export const RoomCard: FC<RoomCardProps> = props => {
 }
 
 const useStyle = createFhUseStyles(
-  ({ typography, pallette, spacing }) => ({
+  ({ typography, palette, spacing }) => ({
     root: {
       display: 'flex',
       flexFlow: 'column nowrap',
       justifyContent: 'center',
       alignItems: 'stretch',
-      borderBottom: `1px solid ${pallette.grey}`,
+      borderBottom: `1px solid ${palette.grey}`,
       marginBottom: spacing(2),
       '& > *+*': {
         marginBottom: spacing(4)

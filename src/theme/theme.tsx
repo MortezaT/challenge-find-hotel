@@ -1,14 +1,14 @@
 import { createSpacing } from './helpers'
 
 export type FhTheme = typeof theme
-export type PalletteColors = keyof FhTheme['pallette']
+export type paletteColors = keyof FhTheme['palette']
 
 const spacing = createSpacing(4)
 
 export const theme = {
   spacing,
   borderRadius: spacing(1.5),
-  pallette: {
+  palette: {
     primary: '#0071F3',
     secondary: '#DAE9FA',
     border: '#BED2E9',

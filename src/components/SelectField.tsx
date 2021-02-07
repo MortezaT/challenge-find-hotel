@@ -41,7 +41,7 @@ export const SelectField: FC<SelectFieldProps> = props => {
 }
 
 const useStyle = createFhUseStyles(
-  ({ borderRadius, pallette, spacing, typography }) => ({
+  ({ borderRadius, palette, spacing, typography }) => ({
     root: {
       position: 'relative',
       display: 'grid'
@@ -53,15 +53,15 @@ const useStyle = createFhUseStyles(
       borderRadius,
       padding: spacing(2, 4),
       height: 40,
-      background: pallette.background,
-      border: `1px solid ${pallette.border}`,
+      background: palette.background,
+      border: `1px solid ${palette.border}`,
       cursor: 'pointer'
     },
     dropdown: {
       position: 'absolute',
       right: spacing(2),
       top: '50%',
-      color: pallette.primary,
+      color: palette.primary,
       transform: 'translateY(-50%)',
       pointerEvents: 'none'
     }

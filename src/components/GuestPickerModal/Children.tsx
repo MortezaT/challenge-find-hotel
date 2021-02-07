@@ -50,7 +50,7 @@ export const Children: FC<ChildrenProps> = props => {
 }
 
 const useStyle = createFhUseStyles(
-  ({ pallette, typography, spacing }) => ({
+  ({ palette, typography, spacing }) => ({
     root: {
       display: 'flex',
       gap: spacing(2),
@@ -70,7 +70,7 @@ const useStyle = createFhUseStyles(
       ...typography.body,
       marginLeft: spacing(2),
       paddingLeft: spacing(2),
-      borderLeft: `1px solid ${pallette.grey}`
+      borderLeft: `1px solid ${palette.grey}`
     }
   }),
   { name: 'Children' }

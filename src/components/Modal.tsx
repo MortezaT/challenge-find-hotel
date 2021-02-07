@@ -29,7 +29,7 @@ export const Modal: FC<ModalProps> = props => {
 }
 
 const useStyle = createFhUseStyles(
-  ({ pallette: { background }, shadows, typography, spacing, zIndex }) => ({
+  ({ palette: { background }, shadows, typography, spacing, zIndex }) => ({
     root: {
       display: 'grid',
       gridTemplateRows: '64px 1fr 96px',
