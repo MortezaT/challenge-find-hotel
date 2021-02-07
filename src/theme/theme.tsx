@@ -28,6 +28,11 @@ export const theme = {
       fontSize: 16,
       fontFamily: 'Inter',
       fontWeight: '600'
+    },
+    body2: {
+      fontSize: 16,
+      fontFamily: 'Inter',
+      fontWeight: 'normal'
     }
   },
   shadows: [
@@ -40,17 +45,18 @@ export const theme = {
 }
 
 export const GlobalRules = {
-  '*': {
-    fontFamily: 'Inter'
-  },
   html: {
     fontSize: 16
   },
   body: {
-    height: '100vh',
-    overflow: 'hidden',
+    border: '1px solid #eaeaea',
+    position: 'relative',
+    height: '630px',
+    width: '360px',
+    margin: 'auto',
     padding: 0,
-    margin: 0,
+    overflow: 'hidden',
+    background: 'top / auto url(/home.jpg) no-repeat',
     fontFamily:
       "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen' 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue' sans-serif"
   }

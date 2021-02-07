@@ -10,8 +10,8 @@ export const ChevronDown: FC<SVGProps<SVGSVGElement>> = props => (
     xmlns='http://www.w3.org/2000/svg'
   >
     <path
-      fill-rule='evenodd'
-      clip-rule='evenodd'
+      fillRule='evenodd'
+      clipRule='evenodd'
       d='M10.59 0.589996L6 5.17L1.41 0.589996L0 2L6 8L12 2L10.59 0.589996Z'
       fill='currentcolor'
     />

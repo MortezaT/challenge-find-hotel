@@ -101,6 +101,7 @@ const useStyle = createFhUseStyles(
 
 Button.defaultProps = {
   iconButton: false,
+  type: 'button',
   size: 'medium',
   color: 'default',
   variant: 'contained'

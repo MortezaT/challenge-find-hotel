@@ -18,7 +18,7 @@ export function createFhUseStyles<
 }
 
 const useMergeClasses = <C extends string>(
-  data: { classes?: Partial<Classes<C>> },
+  data: { classes?: Partial<Classes<C>> } = {},
   classes: Classes<C>
 ) => {
   const merged = useMemo(() => {
